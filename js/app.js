@@ -1,1 +1,1 @@
-angular.module("ngCribs",["ui.bootstrap"]);
+angular.module("cktClub",["ui.bootstrap"]);
