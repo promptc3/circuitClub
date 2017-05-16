@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>Ekam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href = "css/reset.css">
+  <link rel = "stylesheet" href = "css/bootstrap.min.css">
+
+</head>
+<body ng-app = "ngCribs" ng-controller = "cribsController">
+  <pre>{{animals | json}}</pre>
+  <div class="well" ng-repeat = "animal in animals">
+    <h3>{{animal.name}}</h3>
+    <strong>{{animal.price | currency}}</strong>
+    <strong>{{animal.type}}</strong>
+
+  </div>
+
+  <script src = "js/jquery-1.12.2.min.js"></script>
+  <script src = "js/bootstrap.min.js"></script>
+  <script src = "js/tools/smooth.js"></script>
+  <script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+  <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+  <script src = "js/app.js"></script>
+  <script src = "js/controllers/cribsController.js"></script>
+  <script src = "js/factory/cribsFactory.js"></script>
+
+</body>
+
+</html>

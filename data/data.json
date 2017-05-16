@@ -1,0 +1,17 @@
+[
+   {
+     "type":"Cat",
+     "price":200000,
+     "name":"Ipsa"
+   },
+   {
+     "type":"Cat",
+     "price":2521213,
+     "name":"Soutrik"
+   },
+   {
+     "type":"Dog",
+     "price":2565,
+     "name":"Kishor"
+   }
+]
