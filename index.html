@@ -11,12 +11,30 @@
 </head>
 <body ng-app = "cktClub">
 
-  <header ng-controller = "variableController">
+  <header ng-controller = "variableController" class = "rellax" data-rellax-speed = "-4">
     <h1 style= "font-family:'Orbitron'">{{variables.brandName}}</h1>
     <p style="font-family:'Open Sans'">{{variables.brandDesc}}</p>
   </header>
-  <section id = "projects">
+  <section id = "projects" class="rellax" data-rellax-speed = "7">
     <hr>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="">
+
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="">
+
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="">
+
+        </div>
+      </div>
+    </div>
   </section>
   <script src = "js/jquery-1.12.2.min.js"></script>
   <script src = "js/bootstrap.min.js"></script>
@@ -26,6 +44,12 @@
   <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 
   <script src = "js/app.js"></script>
+  <script src = "js/rellax.min.js"></script>
+
+  <script>
+    // Accepts any class name
+    var rellax = new Rellax('.rellax');
+  </script>
   <script src = "js/controllers/variableController.js"></script>
   <script src = "js/factory/variableFactory.js"></script>
 

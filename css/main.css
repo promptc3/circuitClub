@@ -26,7 +26,8 @@ header {
     text-align: center; }
 
 section#projects {
-  height: 100vh; }
+  height: 100vh;
+  background-color: white; }
   section#projects hr {
     margin-top: 100px;
     margin-bottom: 20px;
@@ -34,5 +35,25 @@ section#projects {
     margin-right: 50px;
     border: 0;
     border-top: 2px solid #318035; }
+  section#projects div.row {
+    margin-top: 50px; }
+    section#projects div.row div {
+      height: 60px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      section#projects div.row div div {
+        height: 50px;
+        width: 50px;
+        background-color: black; }
 
 /*# sourceMappingURL=main.css.map */
