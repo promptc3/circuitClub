@@ -1,5 +1,5 @@
 ActiveAdmin.register Team do
- permit_params :name, :user
+ permit_params :name
  config.batch_actions = true
  filter :name
  index do
@@ -13,7 +13,7 @@ ActiveAdmin.register Team do
 				 panel "Team #{team.name}" do
 								 attributes_table_for team do
 												 row("Name"){team.name}
-												 row("Members"){team.user_ids}
+												 row("Members"){team.users}
 								 end
 				 end
  end
@@ -22,9 +22,6 @@ ActiveAdmin.register Team do
 		f.semantic_errors
 	  f.inputs "Student Details" do
 					 f.input :name, label: 'Team Name'
-		       f.has_many :users,heading: 'Members',as: :select,collection: User.all,allow_destroy: true do |t|
-					 	  t.input :roll
-		       end
 		end
 	 f.actions	
  end

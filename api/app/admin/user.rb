@@ -1,5 +1,5 @@
 ActiveAdmin.register User, :as => 'Student' do
-  permit_params :name, :roll, :batch, :email, :password, :password_confirmation
+  permit_params :name, :roll, :batch, :email,:team, :password, :password_confirmation
   config.batch_actions = true
 	filter :roll
 	filter :batch
@@ -24,6 +24,7 @@ ActiveAdmin.register User, :as => 'Student' do
 									row("Enrollment Id"){student.roll}
 									row("Email"){student.email}
 									row("Batch"){student.batch}
+									row("Team"){student.team}
 									end
 					end
 	end
@@ -34,6 +35,7 @@ ActiveAdmin.register User, :as => 'Student' do
       f.input :email
       f.input :roll
 			f.input :batch
+			f.input :team
 			f.input :password
 			f.input :password_confirmation
     end
