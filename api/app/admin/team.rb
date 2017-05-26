@@ -1,15 +1,31 @@
 ActiveAdmin.register Team do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+ permit_params :name, :user
+ config.batch_actions = true
+ filter :name
+ index do
+				 selectable_column
+				 id_column
+				 column :name
+				 column :user_ids
+ end
 
+ show :title => :name do
+				 panel "Team #{team.name}" do
+								 attributes_table_for team do
+												 row("Name"){team.name}
+												 row("Members"){team.user_ids}
+								 end
+				 end
+ end
+
+ form do |f|
+		f.semantic_errors
+	  f.inputs "Student Details" do
+					 f.input :name, label: 'Team Name'
+		       f.has_many :users,heading: 'Members',as: :select,collection: User.all,allow_destroy: true do |t|
+					 	  t.input :roll
+		       end
+		end
+	 f.actions	
+ end
 end

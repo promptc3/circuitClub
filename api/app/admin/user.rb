@@ -1,26 +1,41 @@
-ActiveAdmin.register User do
-  permit_params :email, :password, :password_confirmation
+ActiveAdmin.register User, :as => 'Student' do
+  permit_params :name, :roll, :batch, :email, :password, :password_confirmation
+  config.batch_actions = true
+	filter :roll
+	filter :batch
+	filter :name
 
-  index do
+	index do
     selectable_column
     id_column
-    column :email
-    column :current_sign_in_at
-    column :sign_in_count
+    column :name
+		column :email
+		column :roll
+   # column :current_sign_in_at
+   # column :sign_in_count
     column :created_at
     actions
   end
 
-  filter :email
-  filter :current_sign_in_at
-  filter :sign_in_count
-  filter :created_at
-
+  show :title => :name do
+					panel "Profile" do
+									attributes_table_for student do
+									row("Name") {student.name}
+									row("Enrollment Id"){student.roll}
+									row("Email"){student.email}
+									row("Batch"){student.batch}
+									end
+					end
+	end
   form do |f|
-    f.inputs "Admin Details" do
+					f.semantic_errors
+    f.inputs "Student Details" do
+      f.input :name
       f.input :email
-      f.input :password
-      f.input :password_confirmation
+      f.input :roll
+			f.input :batch
+			f.input :password
+			f.input :password_confirmation
     end
     f.actions
   end
