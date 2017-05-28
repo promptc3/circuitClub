@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  roll: 1
-  batch: 1
-  email: MyString
-
+  name: "Foo Bar"
+  roll: 510615033
+  batch: 2020
+  email: "farfood@bar.com"
+ 
 two:
-  name: MyString
-  roll: 1
-  batch: 1
-  email: MyString
+  name: "Double Cazz"
+  roll: 5106153
+  batch: 2019   
+  email: "burp@gmail.com"

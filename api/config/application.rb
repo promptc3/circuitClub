@@ -18,6 +18,7 @@ Bundler.require(*Rails.groups)
 
 module Api
   class Application < Rails::Application
+  	I18n.enforce_available_locales = false
         config.api_only = true
 				config.middleware.use ActionDispatch::Flash
 				config.middleware.use Rack::MethodOverride

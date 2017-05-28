@@ -4,4 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
 				belongs_to :team
+  validates :roll ,presence: true,length: {maximum: 9,minimum: 9}
 end
