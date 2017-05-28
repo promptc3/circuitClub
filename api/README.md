@@ -6,6 +6,7 @@ Download this repository and follow these steps::
   3. `bin/rails s -p PORTNUMBER'` (PORTNUMBER use the frontend one...)
   4. visit `http://localhost:PORTNUMBER/admin`
   5. email: admin@example.com, password: password (We will change it later)
+  6. type `rails test` and press Enter to see if everything is fine.
 
 ## Links for getting json API
 	1. `cd api/`
@@ -21,5 +22,3 @@ Version and Dependencies:
 * Rails version `Rails 5.0.3`
 
 * Database creation SQlite3
-
-* How to run the test suite !!!!!  no tests written yet 
